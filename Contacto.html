@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Contacto </title>
+        <!--slider-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--estilos-->
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+
+
+
+
+    <!-- MAIN WRAPPER -->
+    <div class="wrapper">
+
+        <!-- BANNER WRAPPER -->
+        <div id="banner-wrapper">
+            <header>
+                <div id="header-inner">
+                    <div id="nivel">
+                        <h2 class= "titulo">COMPANIA DE VOLQUETES LA VASIJA "VOLQUEVAS S.A."
+                            <img class="logo1" src="img/sello.png" alt=""/>
+                        </h2>
+
+                    </div>
+                    <nav>
+                        <a href="#" id="menu-icon">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <ul id="navlist">
+                            <li>
+                                <a href="index.html">INICIO</a>
+                            </li>
+                            <li>
+
+
+                                <a href="Servicios.html">SERVICIOS</a>
+                            </li>
+                            <li>
+                                <a href="Flota.html">FLOTA</a>
+                            </li>
+                            <li>
+                                <a href="Nuestros Socios.html">
+                                    NUESTRO SOCIOS
+                                </a>
+                               
+                            </li>
+                            <li>
+                                <a href="#">
+                                    CONTACTO
+                                </a>
+                            </li>
+
+                        </ul>
+                    </nav>
+
+                </div>
+            </header>
+        </div>
+
+    </div>
+    
+     <header class="tercera">
+        <section class=" textos-header">
+            <h1 class="textoServi">
+                SOCIOS DE NUESTRA COMPAÑIA
+            </h1>
+            <div class="wave" style="height: 100px ;width:1677px ; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                                                                                            style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 439.90,-33.05 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" 
+                                                                                            style="stroke: none; fill: #ecf0f1;"></path></svg></div>                
+
+        </section>
+    </header>
+    
+    
+    <section class="form_wrap">
+        
+        <section class="cantact_info">
+            <section class="info_title">
+                <span class="fa fa-user-circle"></span>
+                <h2>INFORMACION<br>DE CONTACTO</h2>
+            </section>
+            <section class="info_items">
+                <p><span class="fa fa-envelope"></span> info.contact@gmail.com</p>
+                <p><span class="fa fa-mobile"></span> +1(585) 902-8665</p>
+            </section>
+        </section>
+
+        <form action="" class="form_contact">
+            <h2>Puedes enviarnos tu mensaje a través de este formulario, te atenderemos lo antes posible:</h2>
+            <div class="user_info">
+                <label for="names">Nombres *</label>
+                <input type="text" id="names">
+
+                <label for="phone">Telefono / Celular</label>
+                <input type="text" id="phone">
+
+                <label for="email">Correo electronico *</label>
+                <input type="text" id="email">
+
+                <label for="mensaje">Mensaje *</label>
+                <textarea id="mensaje"></textarea>
+
+                <input type="button" value="Enviar Mensaje" id="btnSend">
+            </div>
+        </form>
+
+    </section>
+    
+    <script>
+        $(document).ready(function(){
+
+    $('#btnSend').click(function(){
+
+        var errores = '';
+
+        // Validado Nombre ==============================
+        if( $('#names').val() == '' ){
+            errores += '<p>Escriba un nombre</p>';
+            $('#names').css("border-bottom-color", "#F14B4B")
+        } else{
+            $('#names').css("border-bottom-color", "#d1d1d1")
+        }
+
+        // Validado Correo ==============================
+        if( $('#email').val() == '' ){
+            errores += '<p>Ingrese un correo</p>';
+            $('#email').css("border-bottom-color", "#F14B4B")
+        } else{
+            $('#email').css("border-bottom-color", "#d1d1d1")
+        }
+
+        // Validado Mensaje ==============================
+        if( $('#mensaje').val() == '' ){
+            errores += '<p>Escriba un mensaje</p>';
+            $('#mensaje').css("border-bottom-color", "#F14B4B")
+        } else{
+            $('#mensaje').css("border-bottom-color", "#d1d1d1")
+        }
+
+        // ENVIANDO MENSAJE ============================
+        if( errores == '' == false){
+            var mensajeModal = '<div class="modal_wrap">'+
+                                    '<div class="mensaje_modal">'+
+                                        '<h3>Errores encontrados</h3>'+
+                                        errores+
+                                        '<span id="btnClose">Cerrar</span>'+
+                                    '</div>'+
+                                '</div>'
+
+            $('body').append(mensajeModal);
+        }
+
+        // CERRANDO MODAL ==============================
+        $('#btnClose').click(function(){
+            $('.modal_wrap').remove();
+        });
+    });
+
+});
+        
+        
+        
+    </script>
+    
+    
+    
+    
+    
+    
+    <footer>
+
+        <div class="container-footer-all">
+
+            <div class="container-body">
+
+                <div class="colum1">
+                    <h1>Mas informacion de la compañia</h1>
+
+                    <p>Esta compañia se dedica a la venta de materiales petros para la construccion de cualquier tipo
+                        de obra ya sea vial o viviendas.</p>
+
+                </div>
+
+                <div class="colum2">
+
+                    <h1>Redes Sociales</h1>
+
+                    <div class="row">
+                        <img src="img/facebook.png" alt=""/>
+                        <a href="https://www.facebook.com/carlos.nilve"><label>Siguenos en Facebook</label>
+                    </div>
+                    <div class="row">
+                        <img src="img/twitter.png" alt=""/>
+                        <a href="https://twitter.com/login?lang=es"><label>Siguenos en Twitter</label>
+                    </div>
+                    <div class="row">
+                        <img src="img/instagram.png" alt=""/>
+                        <a href="https://www.instagram.com/?hl=es-la"><label>Siguenos en Instagram</label></a>
+                    </div>
+
+
+                </div>
+
+                <div class="colum3">
+
+                    <h1>Informacion Contactos</h1>
+
+                    <div class="row2">
+                        <img src="img/house.png" alt=""/>
+                        <label>Alvarado S/N La 37 Pueblo Unido</label>
+                    </div>
+
+                    <div class="row2">
+                        <img src="img/smartphone.png" alt=""/>
+                        <label>(+593) 3 - 237 - 6184</label>
+                    </div>
+
+                    <div class="row2">
+                        <img src="img/contact.png" alt=""/>
+                        <label>rcarlitos@gmail.com</label>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container-footer">
+            <div class="footer">
+                <div class="copyright">
+                    © 2020 Todos los Derechos Reservados | <a href="https://www.facebook.com/ronny.nilve">R.N Diseñador y ¨Programador</a>
+                </div>
+
+                <div class="information">
+                    <a href="">Informacion Compañia</a> | <a href="">Privacion y Politica</a> | <a href="">Terminos y Condiciones</a>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Inicio </title>
+        <!--slider-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--estilos-->
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        
+
+
+    </head>
+   
+    <body>
+
+
+
+        <!-- MAIN WRAPPER -->
+        <div id="wrapper">
+
+            <!-- BANNER WRAPPER -->
+            <div id="banner-wrapper">
+                <header>
+                    <div id="header-inner">
+                        <div id="nivel">
+                            <h2 class="titulo ">COMPAÑIA DE VOLQUETES LA VASIJA "VOLQUEVAS S.A." <img class="logo" src="img/sello.png" alt=""/></h2>
+
+                        </div>
+                        <nav class="navegador">
+                            <a href="#" id="menu-icon">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                            <ul id="navlist">
+                                <li>
+                                    <a href="index.html" class="current">
+                                        INICIO
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Servicios.html">SERVICIOS</a>
+                                   
+
+                                </li>
+                                <li>
+                                    <a href="Flota.html">FLOTA</a>
+                                </li>
+                                <li>
+                                    <a href="Nuestros Socios.html">
+                                        NUESTROS SOCIOS
+                                    </a>
+                                    
+                                </li>
+                                <li>
+                                    <a href="Contacto.html">
+                                        CONTACTO
+                                    </a>
+                                </li>
+                               
+                            </ul>
+                        </nav>
+
+                    </div>
+                </header>
+
+
+
+                <div class="slideshow">
+                    <ul class="slider">
+                        <li>
+                            
+                            <img src="img/slider1.png" alt=""/>
+                            
+                        </li>
+                        <li>
+                          
+                            <img src="img/slider2.png" alt=""/>
+                            
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </div>
+
+            <ol class="pagination">
+                <li><span class="fa fa-circle"></span></li>
+                <li><span class="fa fa-circle"></span></li>
+            </ol>
+
+            <div class="left">
+                <span class="fa fa-chevron-left"></span>
+            </div>
+
+            <div class="right">
+                <span class="fa fa-chevron-right"></span>
+            </div>
+
+
+
+
+
+
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                var imgItems = $('.slider li').length; // Numero de Slides
+                var imgPos = 1;
+
+                // Agregando paginacion --
+                for (i = 1; i <= imgItems; i++) {
+                    $('.pagination').append('<li><span class="fa fa-circle"></span></li>');
+                }
+                //------------------------
+
+                $('.slider li').hide(); // Ocultanos todos los slides
+                $('.slider li:first').show(); // Mostramos el primer slide
+                $('.pagination li:first').css({'color': '#F0F45D'}); // Damos estilos al primer item de la paginacion
+
+                // Ejecutamos todas las funciones
+                $('.pagination li').click(pagination);
+                $('.right span').click(nextSlider);
+                $('.left span').click(prevSlider);
+
+
+                setInterval(function () {
+                    nextSlider();
+                }, 4000);
+
+                // FUNCIONES =========================================================
+
+                function pagination() {
+                    var paginationPos = $(this).index() + 1; // Posicion de la paginacion seleccionada
+
+                    $('.slider li').hide(); // Ocultamos todos los slides
+                    $('.slider li:nth-child(' + paginationPos + ')').fadeIn(); // Mostramos el Slide seleccionado
+
+                    // Dandole estilos a la paginacion seleccionada
+                    $('.pagination li').css({'color': '#000000'});
+                    $(this).css({'color': '#F0F45D'});
+
+                    imgPos = paginationPos;
+
+                }
+
+                function nextSlider() {
+                    if (imgPos >= imgItems) {
+                        imgPos = 1;
+                    } else {
+                        imgPos++;
+                    }
+
+                    $('.pagination li').css({'color': '#000000'});
+                    $('.pagination li:nth-child(' + imgPos + ')').css({'color': '#F0F45D'});
+
+                    $('.slider li').hide(); // Ocultamos todos los slides
+                    $('.slider li:nth-child(' + imgPos + ')').fadeIn(); // Mostramos el Slide seleccionado
+
+                }
+
+                function prevSlider() {
+                    if (imgPos <= 1) {
+                        imgPos = imgItems;
+                    } else {
+                        imgPos--;
+                    }
+
+                    $('.pagination li').css({'color': '#000000'});
+                    $('.pagination li:nth-child(' + imgPos + ')').css({'color': '#F0F45D'});
+
+                    $('.slider li').hide(); // Ocultamos todos los slides
+                    $('.slider li:nth-child(' + imgPos + ')').fadeIn(); // Mostramos el Slide seleccionado
+                }
+
+            });
+        </script>
+
+        <main class="uno">
+            <div class="fondo"> 
+                <section class="baner1">
+                    <div><h3>TRANSPORTE INTERPROVINCIAL DE CARGA PESADA</h3>
+                    </div>
+                </section> 
+            </div>     
+        </main>
+        <main class="dos">
+            <div>
+                <section class="division"> 
+
+                    <p class="texto2">Conductores profesionales, unidades modernas y material de buena calidad </p>
+                    <p class="texto2">para garantizar el servicio a nuestro clientes.</p>
+
+                </section>
+            </div>
+
+        </main>
+
+        <!--nuevo div-->
+
+        <div class="wrap">
+            <div class="tarjeta-wrap">
+                <div class="tarjeta">
+                    <div class="adelante card1"></div>
+                    <div class="adelante card3">
+                        <img src="img/bus1.png" alt=""/>
+                    </div>
+                    
+                    <div class="atras">
+                        <h1 class="p">UNIDADES <p class="p1">54</p></h1>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="tarjeta-wrap">
+                <div class="tarjeta">
+                    <div class="adelante card2">
+                        <img src="img/conductores.png" alt=""/>
+                        
+                    </div>
+                    <div class="atras">
+                        <h1 class="p">SOCIOS <p class="p1">50</p></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="tarjeta-wrap">
+                <div class="tarjeta">
+                    <div class="adelante card3">
+                        <img src="img/oficina.png" alt=""/>
+                    </div>
+                    <div class="atras">
+                        <h1 class="p">OFICINAS <p class="p1">1</p></h1>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <section class="empresa">
+            <h3>INFORMACION DE NUESTRA EMPRESA</h3>
+        </section>
+
+
+        <div class="video">
+
+
+            <div class="overlay"></div>
+            <video width="100%" height="100%"  autoplay loop muted="muted"   >
+                <source src="videos/Pexels Videos 2711291.mp4" type="video/mp4">
+               
+
+            </video>
+
+            
+            <div class="absolute">
+                <h1>GRACIAS POR VISITAR NUESTRA PAGINA</h1>
+            </div>
+
+        </div>          
+
+
+
+
+
+
+
+
+
+        <footer>
+
+            <div class="container-footer-all">
+
+                <div class="container-body">
+
+                    <div class="colum1">
+                        <h1>Mas informacion de la compañia</h1>
+
+                        <p>Esta compañia se dedica a la venta de materiales petros para la construccion de cualquier tipo
+                            de obra ya sea vial o viviendas.</p>
+
+                    </div>
+
+                    <div class="colum2">
+
+                        <h1>Redes Sociales</h1>
+
+                        <div class="row">
+                            <img src="img/facebook.png" alt=""/>
+                            
+                            <a href="https://www.facebook.com/carlos.nilve"><label>Siguenos en Facebook</label>
+                        </div>
+                        <div class="row">
+                            <img src="img/twitter.png" alt=""/>
+                            <a href="https://twitter.com/login?lang=es"><label>Siguenos en Twitter</label>
+                        </div>
+                        <div class="row">
+                            <img src="img/instagram.png" alt=""/>
+                            <a href="https://www.instagram.com/?hl=es-la"><label>Siguenos en Instagram</label></a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="colum3">
+
+                        <h1>Informacion Contactos</h1>
+
+                        <div class="row2">
+                            <img src="img/house.png" alt=""/>
+                            <label>Alvarado S/N La 37 Pueblo Unido</label>
+                        </div>
+
+                        <div class="row2">
+                            <img src="img/smartphone.png" alt=""/>
+                            <label>(+593) 3 - 237 - 6184</label>
+                        </div>
+
+                        <div class="row2">
+                            <img src="img/contact.png" alt=""/>
+                            <label>rcarlitos@gmail.com</label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="container-footer">
+                <div class="footer">
+                    <div class="copyright">
+                        © 2020 Todos los Derechos Reservados | <a href="https://www.facebook.com/ronny.nilve">R.N Diseñador y ¨Programador</a>
+                    </div>
+
+                    <div class="information">
+                        <a href="">Informacion Compañia</a> | <a href="">Privacion y Politica</a> | <a href="">Terminos y Condiciones</a>
+                    </div>
+                </div>
+                
+            </div>
+
+        </footer>
+
+    </body>
+</html>

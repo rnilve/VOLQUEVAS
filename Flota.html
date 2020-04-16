@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Flota </title>
+        <!--slider-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--estilos-->
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+
+
+
+
+    <!-- MAIN WRAPPER -->
+    <div class="wrapper">
+
+        <!-- BANNER WRAPPER -->
+        <div id="banner-wrapper">
+            <header>
+                <div id="header-inner">
+                    <div id="nivel">
+                        <h2 class= "titulo">COMPANIA DE VOLQUETES LA VASIJA "VOLQUEVAS S.A."
+                            <img class="logo1" src="img/sello.png" alt=""/>
+                        </h2>
+
+                    </div>
+                    <nav>
+                        <a href="#" id="menu-icon">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <ul id="navlist">
+                            <li>
+                                <a href="index.html">INICIO</a>
+                            </li>
+                            <li>
+
+
+                                <a href="Servicios.html">SERVICIOS</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    FLOTA
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Nuestros Socios.html">
+                                    NUESTROS SOCIOS
+                                </a>
+                                
+                            </li>
+                            <li>
+                                <a href="Contacto.html">
+                                        CONTACTO
+                                    </a>
+                            </li>
+
+                        </ul>
+                    </nav>
+
+                </div>
+            </header>
+        </div>
+
+    </div>
+
+
+    <header class="tercera">
+        <section class=" textos-header">
+            <h1 class="textoServi">
+                NUESTRA FLOTA VEHICULAR
+            </h1>
+            <div class="wave" style="height: 100px ;width:1677px ; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                                                                                            style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 439.90,-33.05 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" 
+                                                                                            style="stroke: none; fill: #ecf0f1;"></path></svg></div>                
+
+        </section>
+    </header>
+
+    <main>               
+
+        <section class="contenedor sobre nosotros"></section>
+        <h2 class="titulo">TRANSPORTE</h2>
+        <div class="contenedor-sobre-nosotros">
+            <img  class="imagen-about-us" src="img/flota.png" alt=""/>
+            <div class="contenido-textox">
+                <h3>VOLQUETES</h3>
+                <p> Contamos con los permisos necesarios para el Transporte de Mercancías Peligrosas (TMP), así como de residuos peligrosos y no peligrosos.
+
+                    Los Clientes de la Cooperativa corresponden a sectores muy diversos, destacando especialmente los de Siderurgia, Cementos y Fertilizantes.</p>
+                <h3>MAQUINARIA</h3> 
+                <p> Para la prestación de los anteriores servicios, TRANSVOL cuenta con 121 transportistas socios y con 10 trabajadores por cuenta ajena, así como colaboradores en régimen de subcontratación. El número de estos últimos varía en función de las necesidades de cada momento.
+
+                </p>
+
+            </div>
+
+
+
+
+ </main>
+
+
+   
+
+    <main>
+        
+        
+        <section class="portafolio">
+            <div class="contenedor">
+                <h2 class="titulo">Portafolio</h2>
+                <ul class="galeria">
+                    <li class="galeria__item">
+                        <img src="img/flota.png" class="galeria__img">
+                        
+                    </li>
+
+
+
+
+                    <li class="galeria__item">
+                        <img src="img/slider/ambacar-jmc-volqueta-2-5-trabajo.jpg" class="galeria__img">
+                        
+                    </li>
+                    <li class="galeria__item"><img src="http://crazy-frankenstein.com/free-wallpapers-files/nature-wallpapers/deserts-wallpapers/bad-moon-rising-desert-wallpaper.jpg" class="galeria__img">
+                        
+                    </li>
+                    <li class="galeria__item">
+                        <img src=" " class="galeria__img">
+                        
+                    </li>
+                    <li class="galeria__item">
+                        <img src=" " class="galeria__img">
+                        
+                    </li>
+                    <li class="galeria__item">
+                        <img src="" class="galeria__img">
+                       
+                    </li>
+                    <li class="galeria__item">
+                        <img src="img/ambacar-jmc-volqueta-2-5-trabajo.jpg " class="galeria__img">
+                        
+                    </li>
+                    <li class="galeria__item">
+                        
+                        <img src=" " class="galeria__img">
+                         
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+        
+      $('.galeria__img').click(function(e){
+  var img = e.target.src;
+  var modal = '<div class="modal" id="modal"><img src="'+ img + '" class="modal__img"><div class="modal__boton" id="modal__boton">X</div></div>';
+  $('body').append(modal);
+  $('#modal__boton').click(function(){
+    $('#modal').remove();
+  })
+});
+
+
+$(document).keyup(function(e){
+  if (e.which==27) {
+    $('#modal').remove();
+  }
+})  
+        
+    </script>
+    
+    
+
+    <footer>
+
+        <div class="container-footer-all">
+
+            <div class="container-body">
+
+                <div class="colum1">
+                    <h1>Mas informacion de la compañia</h1>
+
+                    <p>Esta compañia se dedica a la venta de materiales petros para la construccion de cualquier tipo
+                        de obra ya sea vial o viviendas.</p>
+
+                </div>
+
+                <div class="colum2">
+
+                    <h1>Redes Sociales</h1>
+
+                    <div class="row">
+                        <img src="img/facebook.png" alt=""/>
+                        <a href="https://www.facebook.com/carlos.nilve"><label>Siguenos en Facebook</label>
+                    </div>
+                    <div class="row">
+                        <img src="img/twitter.png" alt=""/>
+                        <a href="https://twitter.com/login?lang=es"><label>Siguenos en Twitter</label>
+                    </div>
+                    <div class="row">
+                        <img src="img/instagram.png" alt=""/>
+                        <a href="https://www.instagram.com/?hl=es-la"><label>Siguenos en Instagram</label></a>
+                    </div>
+
+
+                </div>
+
+                <div class="colum3">
+
+                    <h1>Informacion Contactos</h1>
+
+                    <div class="row2">
+                        <img src="img/house.png" alt=""/>
+                        <label>Alvarado S/N La 37 Pueblo Unido</label>
+                    </div>
+
+                    <div class="row2">
+                        <img src="img/smartphone.png" alt=""/>
+                        <label>(+593) 3 - 237 - 6184</label>
+                    </div>
+
+                    <div class="row2">
+                        <img src="img/contact.png" alt=""/>
+                        <label>rcarlitos@gmail.com</label>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container-footer">
+            <div class="footer">
+                <div class="copyright">
+                    © 2020 Todos los Derechos Reservados | <a href="https://www.facebook.com/ronny.nilve">R.N Diseñador y ¨Programador</a>
+                </div>
+
+                <div class="information">
+                    <a href="">Informacion Compañia</a> | <a href="">Privacion y Politica</a> | <a href="">Terminos y Condiciones</a>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+</body>
+</html>
+
